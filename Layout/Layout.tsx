@@ -1,4 +1,5 @@
 import { FunctionComponent } from 'react';
+import { Up } from '../components';
 import { AppContextProvider, IAppContext } from '../context/app.context';
 import { Footer } from './Footer/Footer';
 import { Header } from './Header/Header';
@@ -15,6 +16,7 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
 				{children}
 			</div>
 			<Footer className={styles.footer} />
+			<Up />
 		</div>
 	);
 };
