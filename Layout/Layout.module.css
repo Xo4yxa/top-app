@@ -12,7 +12,6 @@
 
 .header {
 	grid-area: header;
-	display: none;
 }
 
 .sidebar {
@@ -21,27 +20,40 @@
 
 .body {
 	grid-area: body;
+	outline: none;
 }
 
 .footer {
 	grid-area: footer;
 }
 
+.skipLink {
+	display: block;
+	position: fixed;
+	left: 100px;
+	top: 0px;
+	overflow: hidden;
+	height: 0;
+	background: var(--primary);
+	color: var(--white);
+}
+
+.displayed {
+	height: auto
+}
+
 @media (max-width: 765px) {
 	.wrapper {
-		grid-template-columns: minmax(320px, 1fr) auto;
+		grid-template-columns: minmax(320px, 1fr);
 		grid-template-areas:
 			"header"
 			"body"
 			"footer";
+		gap: 10px;
 	}
 
 	.sidebar {
 		display: none !important;
-	}
-
-	.header {
-		display: block;
 	}
 
 	.body {

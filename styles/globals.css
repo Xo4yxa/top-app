@@ -21,13 +21,13 @@ a {
 	--black: #3B434E;
 	--gray-light: #EBEBEB;
 	--gray: #A4A4A4;
-	--gray-dark: #787D85;
+	--gray-dark: #6C7077;
 	--white: white;
-	--primary: #7653FC;
-	--primary-hover: #6344df;
-	--red-light: #fd9c8b;
+	--primary: #7351F5;
+	--primary-hover: #6344DF;
+	--red-light: #FEA291;
 	--red: #FC836D;
-	--green: #1DC37E;
+	--green: #007B48;
 	--green-light: #C8F8E4;
-	--font-family: 'Noto Sans KR', sans-serif;
+	--font-family: "Noto Sans KR", sans-serif;
 }
