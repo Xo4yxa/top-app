@@ -21,7 +21,7 @@
 	right: 15px;
 }
 
-@media (max-width: 765px) {
+@media (max-width: 790px) {
 	.header {
 		display: grid;
 		grid-template-columns: 1fr 40px;

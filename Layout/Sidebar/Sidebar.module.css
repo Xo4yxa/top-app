@@ -1,5 +1,6 @@
 .sidebar {
 	display: grid;
+	justify-content: space-around;
 	align-content: start;
 	gap: 20px;
 }
