@@ -1,11 +1,10 @@
 .reviewForm {
 	font-size: 14px;
 	line-height: 24px;
-
 	display: grid;
 	grid-template-columns: [start] auto 1fr auto [end];
 	gap: 20px 30px;
-	align-items: center
+	align-items: center;
 }
 
 .description,
@@ -36,7 +35,6 @@
 
 .success {
 	background: var(--green-light);
-
 }
 
 .error {
