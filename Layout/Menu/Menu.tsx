@@ -50,7 +50,7 @@ export const Menu = (): JSX.Element => {
 		}))
 	}
 
-	const openSecondLevelKey = (key: KeyboardEvent, secondCategory: string) => {
+	const openSecondLevelKey = (key: React.KeyboardEvent, secondCategory: string) => {
 		if (key.code == 'Space' || key.code == 'Enter') {
 			key.preventDefault();
 			openSecondLevel(secondCategory);
@@ -61,6 +61,7 @@ export const Menu = (): JSX.Element => {
 		return (
 			<ul className={styles.firstLevelList}>
 				{firstLevelMenu.map(m => (
+					// eslint-disable-next-line jsx-a11y/role-supports-aria-props
 					<li key={m.route} aria-expanded={m.id == firstCategory}>
 						<Link href={`/${m.route}`}>
 							<a>
@@ -89,7 +90,7 @@ export const Menu = (): JSX.Element => {
 					return (
 						< li key={m._id.secondCategory} >
 							<button
-								onKeyDown={(key: KeyboardEvent) => openSecondLevelKey(key, m._id.secondCategory)}
+								onKeyDown={(key: React.KeyboardEvent) => openSecondLevelKey(key, m._id.secondCategory)}
 								className={styles.secondLevel}
 								onClick={() => openSecondLevel(m._id.secondCategory)}
 								aria-expanded={m.isOpened}

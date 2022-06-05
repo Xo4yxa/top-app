@@ -3,7 +3,7 @@ import styles from './Search.module.css';
 import cn from 'classnames';
 import { Input } from '../Input/Input';
 import { Button } from '../Button/Button';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import GlassIcon from './Glass.svg'
 import { useRouter } from 'next/router';
 
@@ -17,29 +17,29 @@ export const Search = ({ className, ...props }: SearchProps): JSX.Element => {
 			query: {
 				q: search
 			}
-		})
-	}
+		});
+	};
 
-	const handlKeyDown = (e: KeyboardEvent) => {
+	const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
 		if (e.key == 'Enter') {
-			goToSearch()
+			goToSearch();
 		}
-	}
+	};
 
 	return (
 		<form className={cn(className, styles.search)} {...props} role="search">
 			<Input
 				className={styles.input}
-				placeholder='Поиск...'
+				placeholder="Поиск..."
 				value={search}
 				onChange={(e) => setSearch(e.target.value)}
-				onKeyDown={handlKeyDown}
+				onKeyDown={handleKeyDown}
 			/>
 			<Button
-				appearance='primary'
+				appearance="primary"
 				className={styles.button}
 				onClick={goToSearch}
-				aria-label="Искать"
+				aria-label="Искать по сайту"
 			>
 				<GlassIcon />
 			</Button>

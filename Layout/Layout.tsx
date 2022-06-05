@@ -12,7 +12,7 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
 	const [isSkipLinkDisplayed, setIsSkipLinkDisplayed] = useState<boolean>(false);
 	const bodyRef = useRef<HTMLDivElement>(null)
 
-	const skipContenAction = (key: KeyboardEvent) => {
+	const skipContenAction = (key: React.KeyboardEvent) => {
 		if (key.code == 'Space' || key.code == 'Enter') {
 			key.preventDefault();
 			bodyRef.current?.focus();
