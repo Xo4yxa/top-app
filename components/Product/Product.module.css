@@ -42,10 +42,6 @@
 	grid-column: start / middle;
 }
 
-.advBlock {
-	grid-column: middle / end;
-}
-
 .logo img {
 	grid-column: start / logoend;
 	grid-row: 1 / span 2;
@@ -104,12 +100,12 @@
 .advBlock {
 	font-size: 16px;
 	line-height: 22px;
+	grid-column: middle / end;
 }
 
 .advTitle {
 	font-weight: 700;
 	margin-bottom: 5px;
-
 }
 
 .advantages {
@@ -128,10 +124,8 @@
 	grid-template-columns: auto 1fr auto;
 	padding-right: 60px;
 	gap: 10px;
-
 	font-size: 16px;
 	line-height: 32px;
-
 }
 
 .characteristicsName {
@@ -155,8 +149,7 @@
 
 @media screen and (max-width: 1320px) {
 	.product {
-		grid-template-columns:
-			70px 30px auto 40px auto 40px auto 40px 1fr;
+		grid-template-columns: 70px 30px auto 40px auto 40px auto 40px 1fr;
 		grid-template-areas:
 			"logo . title title title title title"
 			"logo . tags tags tags tags tags"
@@ -167,8 +160,7 @@
 			"feature feature feature feature feature feature feature"
 			"advBlock advBlock advBlock advBlock advBlock advBlock advBlock"
 			"hr2 hr2 hr2 hr2 hr2 hr2 hr2"
-			"actions actions actions actions actions actions actions"
-		;
+			"actions actions actions actions actions actions actions";
 	}
 
 	.logo {
@@ -237,8 +229,7 @@
 
 @media screen and (max-width: 640px) {
 	.product {
-		grid-template-columns:
-			70px 30px 1fr;
+		grid-template-columns: 70px 30px 1fr;
 		grid-template-areas:
 			"logo . title"
 			"logo . tags"
@@ -250,8 +241,7 @@
 			"feature feature feature"
 			"advBlock advBlock advBlock"
 			"hr2 hr2 hr2"
-			"actions actions actions"
-		;
+			"actions actions actions";
 	}
 
 	.price {
@@ -285,7 +275,6 @@
 			"feature"
 			"advBlock"
 			"hr2"
-			"actions"
-		;
+			"actions";
 	}
 }

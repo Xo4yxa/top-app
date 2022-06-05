@@ -4,9 +4,9 @@ import { AppContextProvider, IAppContext } from '../context/app.context';
 import { Footer } from './Footer/Footer';
 import { Header } from './Header/Header';
 import styles from './Layout.module.css';
+import cn from 'classnames'
 import { LayoutProps } from './Layout.props';
 import { Sidebar } from './Sidebar/Sidebar';
-import cn from 'classnames'
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
 	const [isSkipLinkDisplayed, setIsSkipLinkDisplayed] = useState<boolean>(false);
@@ -32,9 +32,9 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
 			>Сразу к содержанию</a>
 			<Header className={styles.header} />
 			<Sidebar className={styles.sidebar} />
-			<div className={styles.body} ref={bodyRef} tabIndex={0}>
+			<main className={styles.body} ref={bodyRef} tabIndex={0} role="main">
 				{children}
-			</div>
+			</main>
 			<Footer className={styles.footer} />
 			<Up />
 		</div>
